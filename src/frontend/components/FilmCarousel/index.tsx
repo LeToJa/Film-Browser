@@ -13,7 +13,7 @@ export default function FilmCarousel({ title, films }: FilmCarouselProps) {
             to={`/film/${film.id}`}
             className={`film-card ${film.category.toLowerCase()}`}
           >
-            <img src="https://picsum.photos/300/450" alt={film.title} />
+            <img src={film.poster} alt={film.title} />
             {film.title}
           </Link>
         ))}

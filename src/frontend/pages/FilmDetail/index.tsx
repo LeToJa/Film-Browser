@@ -20,8 +20,8 @@ export default function FilmDetail() {
   return (
     <div className={`film-detail film-item ${film.category.toLowerCase()}`}>
       <h1>{film.title}</h1>
-      <img src="https://picsum.photos/300/450" alt={film.title} />
-      <p>Description placeholder for {film.title}</p>
+      <img src={film.poster} alt={film.title} />
+      <p>{film.overview}</p>
       <WishlistButton
         film={film}
         isInWishlist={isInWishlist}

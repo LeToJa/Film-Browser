@@ -19,7 +19,7 @@ export default function Wishlist() {
             className={`film-item ${film.category.toLowerCase()}`}
           >
             <Link to={`/film/${film.id}`}>
-              <img src="https://picsum.photos/300/450" alt={film.title} />
+              <img src={film.poster} alt={film.title} />
               {film.title}
             </Link>
             <WishlistButton

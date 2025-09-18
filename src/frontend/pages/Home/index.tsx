@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Homepage Placeholder</h1>
+      <h1>Homepage</h1>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error loading films</p>}
       {!isLoading &&
