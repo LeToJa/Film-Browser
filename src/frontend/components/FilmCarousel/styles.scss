@@ -1,0 +1,39 @@
+.film-carousel {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .film-carousel-list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .film-card {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+
+    &.action {
+      background-color: #ffe5e5;
+    }
+
+    &.comedy {
+      background-color: #e5ffe5;
+    }
+
+    &.drama {
+      background-color: #e5e5ff;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

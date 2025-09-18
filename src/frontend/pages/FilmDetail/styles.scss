@@ -1,0 +1,38 @@
+.film-detail {
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  &.action {
+    font-family: 'Impact', sans-serif;
+
+    .wishlist-button {
+      background-color: red;
+    }
+  }
+
+  &.comedy {
+    font-family: 'Comic Sans MS', sans-serif;
+
+    .wishlist-button {
+      background-color: green;
+    }
+  }
+
+  &.drama {
+    font-family: 'Georgia', serif;
+
+    .wishlist-button {
+      background-color: blue;
+    }
+  }
+}

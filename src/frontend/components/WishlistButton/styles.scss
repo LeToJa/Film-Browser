@@ -1,0 +1,26 @@
+.wishlist-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+.film-item {
+  &.action {
+    .wishlist-button {
+      background-color: red;
+    }
+  }
+
+  &.comedy {
+    .wishlist-button {
+      background-color: green;
+    }
+  }
+
+  &.drama {
+    .wishlist-button {
+      background-color: blue;
+    }
+  }
+}
