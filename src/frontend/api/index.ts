@@ -7,7 +7,7 @@ export async function fetchFilms(): Promise<FilmType[]> {
     throw new Error('Failed to fetch films')
   }
 
-  return response.json()
+  return response.json() as unknown as FilmType[]
 }
 
 export async function fetchFilmById(id: number): Promise<FilmType> {
@@ -17,5 +17,5 @@ export async function fetchFilmById(id: number): Promise<FilmType> {
     throw new Error('Film not found')
   }
 
-  return response.json()
+  return response.json() as unknown as FilmType
 }

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import type { FilmCarouselProps } from './index.types'
-import './styles.scss'
 
 export default function FilmCarousel({ title, films }: FilmCarouselProps) {
   return (

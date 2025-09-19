@@ -1,5 +1,4 @@
 import type { WishlistButtonProps } from './types'
-import './styles.scss'
 
 export default function WishlistButton({
   film,

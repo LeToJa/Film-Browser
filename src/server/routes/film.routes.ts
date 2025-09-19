@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { getAllFilms, getFilmById } from '../controller/film.controller.ts'
+import { getAllFilms, getFilmById } from '../controller/film.controller'
 
 const router = Router()
 

@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom'
 import { useFilm } from '../../hooks'
 import { useWishlistStore } from '../../store'
 import WishlistButton from '../../components/WishlistButton'
-import './styles.scss'
 
 export default function FilmDetail() {
   const { id } = useParams()
