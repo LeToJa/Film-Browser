@@ -1,6 +1,6 @@
-import type { FilmCategoriesType } from '../../../shared/types'
 import { useFilms } from '../../hooks'
 import FilmCarousel from '../../components/FilmCarousel'
+import type { FilmCategoriesType } from '../../../shared/types'
 
 export default function Home() {
   const categories: FilmCategoriesType[] = ['Action', 'Comedy', 'Drama']
@@ -8,7 +8,7 @@ export default function Home() {
   const { data: films, isLoading, error } = useFilms()
 
   return (
-    <div>
+    <section id="home-page">
       <h1>Homepage</h1>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error loading films</p>}
@@ -22,6 +22,6 @@ export default function Home() {
             films={films.filter((f) => f.category === cat)}
           />
         ))}
-    </div>
+    </section>
   )
 }

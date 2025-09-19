@@ -1,26 +1,36 @@
 .wishlist-button {
-    padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
     color: #fff;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.15rem;
+    transition: ease-in-out .5s;
+
+    &:hover {
+      transform: rotate(-2deg) scale(1.01);
+    }
 }
 
 .film-item {
   &.action {
     .wishlist-button {
-      background-color: red;
+      background-color: $action-color;
     }
   }
 
   &.comedy {
     .wishlist-button {
-      background-color: green;
+      background-color: $comedy-color;
     }
   }
 
   &.drama {
     .wishlist-button {
-      background-color: blue;
+      background-color: $drama-color;
     }
   }
 }

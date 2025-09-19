@@ -1,36 +1,17 @@
-import { Link } from 'react-router-dom'
 import { useWishlistStore } from '../../store'
-import WishlistButton from '../../components/WishlistButton'
+import FilmCarousel from '../../components/FilmCarousel'
 
 export default function Wishlist() {
-  const { wishlist, addToWishlist, removeFromWishlist } = useWishlistStore()
-
-  if (wishlist.length === 0) {
-    return <p>Your wishlist is empty.</p>
-  }
+  const { wishlist } = useWishlistStore()
 
   return (
-    <div className="wishlist">
-      <h2>Your Wishlist</h2>
-      <ul>
-        {wishlist.map((film) => (
-          <li
-            key={film.id}
-            className={`film-item ${film.category.toLowerCase()}`}
-          >
-            <Link to={`/film/${film.id}`}>
-              <img src={film.poster} alt={film.title} />
-              {film.title}
-            </Link>
-            <WishlistButton
-              film={film}
-              isInWishlist={true}
-              addToWishlist={addToWishlist}
-              removeFromWishlist={removeFromWishlist}
-            />
-          </li>
-        ))}
-      </ul>
+    <div id="wishlist-page">
+      <h1>Your Wishlist</h1>
+      {wishlist.length === 0 ? (
+        <p>Your wishlist is empty.</p>
+      ) : (
+        <FilmCarousel title="Wishlist" films={wishlist} />
+      )}
     </div>
   )
 }

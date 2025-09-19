@@ -1,5 +1,5 @@
 import type { JSX } from 'react'
 
-export type LayoutProps = {
+export type ReactComponentWithChildrenProps = {
   children: JSX.Element
 }

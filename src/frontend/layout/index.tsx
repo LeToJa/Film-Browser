@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom'
-import type { LayoutProps } from './index.types'
+import type { ReactComponentWithChildrenProps } from '../general/types'
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children }: ReactComponentWithChildrenProps) {
   return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/wishlist">Wishlist</Link>
-      </nav>
-      {children}
-    </div>
+    <>
+      <div id="app-header">
+        <nav className="general-body">
+          <Link to="/">Home</Link>
+          <Link to="/wishlist">Wishlist</Link>
+        </nav>
+      </div>
+      <section className="general-body">{children}</section>
+    </>
   )
 }

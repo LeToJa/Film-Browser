@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
-import type { FilmType } from '../../shared/types'
 import { fetchFilmById, fetchFilms } from '../api'
+import type { FilmType } from '../../shared/types'
 
 export function useFilms() {
   return useQuery<FilmType[]>({

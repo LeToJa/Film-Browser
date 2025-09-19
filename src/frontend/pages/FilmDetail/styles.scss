@@ -1,38 +1,55 @@
-.film-detail {
+#detail-page {
+  display: grid;
+  grid-template-columns: max(30%, 400px) 70%;
+  gap: 2rem;
+
   h1 {
-    margin-bottom: 1rem;
+    grid-column: span 2;
+    margin: 2rem 0 0 0;
   }
 
-  img {
-    display: block;
-    margin-bottom: 1rem;
+  aside {
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+    }
   }
 
-  p {
-    margin-bottom: 1rem;
+  article {
+    p {
+      background: #eaeaea;
+      box-shadow: lightgray 0 0 5px;
+      padding: 1rem;
+      margin:0 0 1rem 0;
+    }
+  }
+
+  .film-carousel {
+    grid-column: span 2;
   }
 
   &.action {
-    font-family: 'Impact', sans-serif;
-
-    .wishlist-button {
-      background-color: red;
-    }
+    font-family: 'Work Sans', sans-serif;
   }
 
   &.comedy {
-    font-family: 'Comic Sans MS', sans-serif;
-
-    .wishlist-button {
-      background-color: green;
-    }
+    font-family: 'Open Sans', sans-serif;
   }
 
   &.drama {
-    font-family: 'Georgia', serif;
+    font-family: 'Lato', serif;
+  }
+}
 
-    .wishlist-button {
-      background-color: blue;
+@media (max-width: 900px) {
+  .general-body {
+    #detail-page {
+      grid-template-columns: 100%;
+
+      * {
+        grid-column: 1;
+      }
     }
   }
 }
