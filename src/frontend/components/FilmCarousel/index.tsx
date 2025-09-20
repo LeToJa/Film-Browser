@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import CarouselButton from '../CarouselButton'
 import type { FilmCarouselProps } from './index.types'
 
 export default function FilmCarousel({ title, films }: FilmCarouselProps) {
@@ -38,20 +39,12 @@ export default function FilmCarousel({ title, films }: FilmCarouselProps) {
       <h2 className="carousel-title">
         {title}
         <div className="carousel-controls">
-          <button
-            onClick={prev}
-            disabled={index === 0}
-            className="carousel-button"
-          >
+          <CarouselButton onClick={prev} disabled={index === 0}>
             {'<'}
-          </button>
-          <button
-            onClick={next}
-            disabled={index === maxIndex}
-            className="carousel-button"
-          >
+          </CarouselButton>
+          <CarouselButton onClick={next} disabled={index === maxIndex}>
             {'>'}
-          </button>
+          </CarouselButton>
         </div>
       </h2>
       <div className="film-carousel-wrapper">

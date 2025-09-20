@@ -7,6 +7,7 @@ import './general/styles.scss'
 import './layout/styles.scss'
 import './pages/FilmDetail/styles.scss'
 import './components/FilmCarousel/styles.scss'
+import './components/CarouselButton/styles.scss'
 import './components/WishlistButton/styles.scss'
 
 ReactDOM.hydrateRoot(

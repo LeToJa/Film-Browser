@@ -10,22 +10,6 @@
     .carousel-controls {
       display: flex;
       gap: 0.5rem;
-
-      button {
-        padding: 0.5rem;
-        border: none;
-        background: transparent;
-        color: black;
-        font-weight: 900;
-        cursor: pointer;
-        border: 2px solid;
-        border-radius: 3px;
-
-        &:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
-      }
     }
   }
 
