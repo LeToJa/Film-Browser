@@ -1,8 +1,8 @@
 # Film Browser
 
-A React + Express application for browsing films. Server-side rendering with Vite and React Query. Includes state management with Zustand and testing with vitest (and end-to-end with Cypress).
+A React + Express application for browsing films. Server-side rendering with Vite and React Query. Includes state management with Zustand (far less boilerplate than Redux, don't worry, I know how to use it) and testing with vitest (and end-to-end with Cypress).
 
-I use the Express server for providing the films list instead of an external API.
+I use the Express server to provide the films list instead of an external API.
 
 ## Requirements
 

@@ -1,3 +1,19 @@
 $action-color: red;
 $comedy-color: green;
 $drama-color: blue;
+
+@mixin button-style() {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.15rem;
+  transition: ease-in-out 0.5s transform;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    transform: rotate(-5deg) scale(1.02);
+  }
+}
