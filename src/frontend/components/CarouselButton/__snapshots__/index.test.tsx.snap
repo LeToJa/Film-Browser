@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CarouselButton > is disabled when disabled prop is true 1`] = `
+<DocumentFragment>
+  <button
+    class="carousel-button"
+    disabled=""
+  >
+    &gt;
+  </button>
+</DocumentFragment>
+`;
+
+exports[`CarouselButton > renders correctly with children 1`] = `
+<DocumentFragment>
+  <button
+    class="carousel-button"
+  >
+    Next &gt;
+  </button>
+</DocumentFragment>
+`;

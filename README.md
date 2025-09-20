@@ -23,6 +23,12 @@ npm i
   npm run dev
   ```
 
+- **Build**
+
+  ```bash
+  npm run build
+  ```
+
 - **Lint**
 
   ```bash

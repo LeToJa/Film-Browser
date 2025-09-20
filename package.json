@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "tsx src/server/index.ts",
+    "build:client": "vite build",
+    "build:server": "vite build --ssr src/frontend/entry-server.tsx --outDir dist/server",
+    "build": "npm run build:client && npm run build:server",
     "lint": "eslint .",
     "format": "prettier --write .",
     "cypress:open": "cypress open",
