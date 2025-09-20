@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Layout > matches snapshot with children 1`] = `
+<div>
+  <div
+    id="app-header"
+  >
+    <nav
+      class="general-body"
+    >
+      <a>
+        Home
+      </a>
+      <a>
+        Wishlist
+      </a>
+    </nav>
+  </div>
+  <section
+    class="general-body"
+  >
+    <div>
+      Child Content
+    </div>
+  </section>
+</div>
+`;

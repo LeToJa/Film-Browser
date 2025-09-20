@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <section id="home-page">
       <h1>Homepage</h1>
-      {isLoading && <p>Loading...</p>}
-      {error && <p>Error loading films</p>}
+      {isLoading && <p className="loading-message">Loading...</p>}
+      {error && <p className="loading-message">Error loading films</p>}
       {!isLoading &&
         !error &&
         films &&

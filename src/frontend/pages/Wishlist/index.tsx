@@ -8,7 +8,7 @@ export default function Wishlist() {
     <div id="wishlist-page">
       <h1>Your Wishlist</h1>
       {wishlist.length === 0 ? (
-        <p>Your wishlist is empty.</p>
+        <p className="loading-message">Your wishlist is empty.</p>
       ) : (
         <FilmCarousel title="Wishlist" films={wishlist} />
       )}

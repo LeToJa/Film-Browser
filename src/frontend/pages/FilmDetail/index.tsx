@@ -8,16 +8,33 @@ export default function FilmDetail() {
   const { id } = useParams()
   const filmId = Number(id)
 
-  const { data: film, isLoading, isError, error } = useFilm(filmId)
-  const { data: films = [] } = useFilms()
+  const {
+    data: film,
+    isLoading: isLoadingFilm,
+    isError: isErrorFilm,
+    error: errorFilm,
+  } = useFilm(filmId)
+  const {
+    data: films = [],
+    isLoading: isLoadingFilms,
+    isError: isErrorFilms,
+    error: errorFilms,
+  } = useFilms()
   const { addToWishlist, wishlist, removeFromWishlist } = useWishlistStore()
 
-  if (isLoading) return <p>Loading film...</p>
-  if (isError) return <p>Error: {(error as Error).message}</p>
-  if (!film) return <p>Film not found</p>
+  if (isLoadingFilm || isLoadingFilms)
+    return <p className="loading-message">Loading film...</p>
+  if (isErrorFilm)
+    return (
+      <p className="loading-message">Error: {(errorFilm as Error).message}</p>
+    )
+  if (isErrorFilms)
+    return (
+      <p className="loading-message">Error: {(errorFilms as Error).message}</p>
+    )
+  if (!film) return <p className="loading-message">Film not found</p>
 
   const isInWishlist = wishlist.some((f) => f.id === film.id)
-
   const relatedFilms = films.filter(
     (f) => f.category === film.category && f.id !== film.id
   )
