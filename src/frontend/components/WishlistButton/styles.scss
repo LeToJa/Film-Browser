@@ -1,18 +1,18 @@
 .wishlist-button {
-    border: none;
-    cursor: pointer;
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none;
-    padding: .5rem 1rem;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 1.15rem;
-    transition: ease-in-out .5s;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.15rem;
+  transition: ease-in-out 0.5s;
 
-    &:hover {
-      transform: rotate(-2deg) scale(1.01);
-    }
+  &:hover {
+    transform: rotate(-2deg) scale(1.01);
+  }
 }
 
 .film-item {

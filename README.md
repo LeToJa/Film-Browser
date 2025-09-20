@@ -1,69 +1,79 @@
-# React + TypeScript + Vite
+# Film Browser
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Express application for browsing films. Server-side rendering with Vite and React Query. Includes state management with Zustand and testing with vitest (and end-to-end with Cypress).
 
-Currently, two official plugins are available:
+I use the Express server for providing the films list instead of an external API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requirements
 
-## Expanding the ESLint configuration
+- Node.js >= 20
+- npm
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm i
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Development server**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  ```bash
+  npm run dev
+  ```
+
+- **Lint**
+
+  ```bash
+  npm run lint
+  ```
+
+- **Format code**
+
+  ```bash
+  npm run format
+  ```
+
+- **Unit tests**
+
+  ```bash
+  npm run test
+  ```
+
+- **Watch tests**
+
+  ```bash
+  npm run test:watch
+  ```
+
+- **Open Cypress**
+
+  ```bash
+  npm run cypress:open
+  ```
+
+- **Run Cypress E2E tests**
+
+  ```bash
+  npm run test:e2e
+  ```
+
+## Project Structure
+
 ```
+src/
+├─ frontend/      React components, pages, hooks, and store
+├─ server/        Express server, routes, controllers, data
+└─ shared/        Types, constants, mocks
+```
+
+## Features
+
+- React Query for data fetching
+- Zustand for wishlist state management
+- Server-side rendering with Vite
+- SCSS for styling
+- Fully typed with TypeScript
+- Unit and snapshot tests with Vitest
+- E2E tests with Cypress
